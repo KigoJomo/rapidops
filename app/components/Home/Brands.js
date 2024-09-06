@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Brands = () => {
   return (
-    <section className="container-custom-xs my-28 flex flex-col gap-8 justify-center">
+    <section className="container-custom-xs my-28 flex flex-col gap-8 justify-center md:px-64">
       <h2 className='text-2xl'>Trusted by top brands globally</h2>
 
       <p className="text-gray-600">
@@ -11,8 +11,8 @@ const Brands = () => {
       
       <div className="image w-full">
         <Image
-          width={100}
-          height={100}
+          width={1000}
+          height={1000}
           src="/images/brands.png"
           className="w-full aspect-auto"
           alt=""
