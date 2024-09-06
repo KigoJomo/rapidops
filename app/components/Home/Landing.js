@@ -24,67 +24,73 @@ const Landing = () => {
   }, [])
 
   return (
-    <section className="flex flex-col gap-8 md:px-64">
-      <h2 className="text-4xl font-bold">
-        <span className="whitespace-nowrap">We deliver</span>
-        <div className="auto-scroll">
-          {textNo === 1 ? (
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={1}
-                variants={container}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className="text-gray-500"
-              >
-                Air Traffic Control
-              </motion.div>
-            </AnimatePresence>
-          ) : textNo === 2 ? (
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={2}
-                variants={container}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className="text-gray-500"
-              >
-                Info/Data Management.
-              </motion.div>
-            </AnimatePresence>
-          ) : textNo === 3 ? (
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={3}
-                variants={container}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className="text-gray-500"
-              >
-                Public Safety,
-              </motion.div>
-            </AnimatePresence>
-          ) : (
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={1}
-                variants={container}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className="text-gray-500"
-              >
-                Information/Data Management.
-              </motion.div>
-            </AnimatePresence>
-          )}
-        </div>
-      </h2>
+    <section className="flex flex-col items-center gap-8 md:px-64">
 
-      <motion.div style={{ x }} className="flex-shrink-0">
+      <div className="w-full">
+        <h2 className="text-4xl font-bold">
+          <span className="whitespace-nowrap">We deliver</span>
+          <div className="auto-scroll">
+            {textNo === 1 ? (
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={1}
+                  variants={container}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
+                  className="text-gray-500"
+                >
+                  Air Traffic Control
+                </motion.div>
+              </AnimatePresence>
+            ) : textNo === 2 ? (
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={2}
+                  variants={container}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
+                  className="text-gray-500"
+                >
+                  Info/Data Management.
+                </motion.div>
+              </AnimatePresence>
+            ) : textNo === 3 ? (
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={3}
+                  variants={container}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
+                  className="text-gray-500"
+                >
+                  Public Safety,
+                </motion.div>
+              </AnimatePresence>
+            ) : (
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={1}
+                  variants={container}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
+                  className="text-gray-500"
+                >
+                  Information/Data Management.
+                </motion.div>
+              </AnimatePresence>
+            )}
+          </div>
+        </h2>
+      </div>
+
+      <motion.div
+        // style={{ x }}
+        className="flex-shrink-0 w-screen"
+      >
         <video
           className="w-full h-full"
           autoPlay
