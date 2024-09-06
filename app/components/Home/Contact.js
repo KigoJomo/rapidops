@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section className="min-h-[60vh] flex flex-col items-center justify-center">
+    <section className="min-h-[40vh] flex flex-col items-center justify-center">
       <h2 className="text-3xl font-serif">Let’s talk business.</h2>
 
       <button className="relative group mt-10 w-fit py-4 px-6 bg-black text-white font-medium before:w-full before:h-full before:scale-x-0 before:transition-transform before:duration-300 before:origin-left before:bg-green-500 hover:gap-4 hover:text-black hover:before:scale-x-100 isolate before:absolute before:top-0 before:left-0 before:z-0">
