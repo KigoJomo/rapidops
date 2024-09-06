@@ -9,27 +9,23 @@ const container = {
   exit: { opacity: 0, y: '-1vh' },
 }
 
-const { default: CustomButton } = require('../CustomButton')
-
 const Landing = () => {
-  const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 1], [-600, 7000]);
+  const { scrollYProgress } = useScroll()
+  const x = useTransform(scrollYProgress, [0, 1], [-600, 7000])
 
-  const [textNo, setTextNo] = useState(1);
+  const [textNo, setTextNo] = useState(1)
   useEffect(() => {
     const interval = setInterval(() => {
-      setTextNo((prev) => (prev > 2 ? 1 : prev + 1));
-    }, 2000);
+      setTextNo((prev) => (prev > 2 ? 1 : prev + 1))
+    }, 2000)
     return () => {
-      clearInterval(interval);
-    };
-  }, []);
+      clearInterval(interval)
+    }
+  }, [])
 
   return (
-    <section className='flex flex-col gap-8 md:px-64'>
-      <h2
-        className="text-4xl font-bold"
-      >
+    <section className="flex flex-col gap-8 md:px-64">
+      <h2 className="text-4xl font-bold">
         <span className="whitespace-nowrap">We deliver</span>
         <div className="auto-scroll">
           {textNo === 1 ? (
@@ -88,12 +84,7 @@ const Landing = () => {
         </div>
       </h2>
 
-      <motion.div
-        style={{
-          x,
-        }}
-        className='border border-black w-full flex'
-      >
+      <motion.div style={{ x }} className="flex-shrink-0">
         <video
           className="w-full h-full"
           autoPlay
@@ -108,7 +99,6 @@ const Landing = () => {
           />
         </video>
       </motion.div>
-
     </section>
   )
 }
