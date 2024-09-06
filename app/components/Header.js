@@ -28,12 +28,12 @@ const Header = () => {
           isMenuOpen ? 'flex' : 'hidden'
         } flex-col`}
       >
-        <div className="w-full flex items-center justify-between px-6 py-6">
+        <div className="w-full flex items-center justify-between px-6 md:px-48 py-6">
           <Logo white />
           <button onClick={toggleMenu} className='text-white text-lg'>&#x2715;</button>
         </div>
 
-        <ul className="menu-list w-full h-full border-t px-6 py-6 flex flex-col gap-4">
+        <ul className="menu-list w-full h-full border-t px-6 md:px-64 py-6 flex flex-col gap-4">
           {menuItems.map((item) => (
             <li className="menu-item w-full h-fit py-4" key={item.href}>
               <Link href={item.href} className="text-r-ash text-4xl uppercase font-bold w-full" onClick={toggleMenu}>

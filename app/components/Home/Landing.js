@@ -26,12 +26,9 @@ const Landing = () => {
   }, []);
 
   return (
-    <section className='flex felx-col gap-8 md:px-64'>
+    <section className='flex flex-col gap-8 md:px-64'>
       <h2
-        className="text-4xl font-bold container-custom-xs"
-        // style={{
-        //   height: '2em',
-        // }}
+        className="text-4xl font-bold"
       >
         <span className="whitespace-nowrap">We deliver</span>
         <div className="auto-scroll">
@@ -95,6 +92,7 @@ const Landing = () => {
         style={{
           x,
         }}
+        className='border border-black w-full flex'
       >
         <video
           className="w-full h-full"
