@@ -89,7 +89,7 @@ const Landing = () => {
 
       <motion.div
         // style={{ x }}
-        className="flex-shrink-0 w-screen"
+        className="flex-shrink-0 w-screen hidden"
       >
         <video
           className="w-full h-full"

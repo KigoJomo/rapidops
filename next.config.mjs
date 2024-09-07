@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['www.rapidops.com'], // Add the external domains here
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.rapidops.com'
+      },
+    ],
   },
 };
 
